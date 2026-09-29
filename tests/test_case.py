@@ -15,3 +15,9 @@ def test_spaces_and_dashes():
 
 def test_digits_stay_attached():
     assert snake_case("version2Update") == "version2_update"
+
+
+def test_kebab():
+    from textkit import kebab_case
+
+    assert kebab_case("helloWorld") == "hello-world"
