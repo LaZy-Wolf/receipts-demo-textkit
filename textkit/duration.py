@@ -11,7 +11,7 @@ def parse_duration(text: str) -> int:
         raise ValueError(f"invalid duration: {text!r}")
     total = 0
     for value, unit in tokens:
-        total = int(value) * _UNITS[unit]
+        total += int(value) * _UNITS[unit]
     return total
 
 
